@@ -8,65 +8,65 @@ const Hero: React.FC = () => {
   const [displayGreeting, setDisplayGreeting] = useState('Hi');
   const roles = ['Generative AI', 'Full Stack Developer', 'Problem Solver'];
   const greetings = [
-    'Hi', // English
-    'नमस्ते', // Hindi
-    'Bonjour', // French
-    'வணக்கம்', // Tamil
-    'നമസ്കാരം', // Malayalam
-    'నమస్కారం', // Telugu
-    'ਸਤ ਸ੍ਰੀ ਅਕਾਲ', // Punjabi
-    'السلام علیکم', // Urdu
+    'Hi',
+    'नमस्ते',
+    'Bonjour',
+    'வணக்கம்',
+    'നമസ്കാരം',
+    'నమస్కారం',
+    'ਸਤ ਸ੍ਰੀ ਅਕਾਲ',
+    'السلام علیکم'
 
   ];
   
-  // Greeting typing animation effect
+  // Animate greeting text transitions
   useEffect(() => {
     const currentGreeting = greetings[currentGreetingIndex];
     let timeouts: number[] = [];
     
-    // Clear display first
+    // Reset display state
     setDisplayGreeting('');
     
-    // Typing animation
+    // Character-by-character typing effect
     for (let i = 0; i <= currentGreeting.length; i++) {
       timeouts.push(setTimeout(() => {
         setDisplayGreeting(currentGreeting.slice(0, i));
       }, i * 150));
     }
     
-    // Wait, then clear and move to next greeting
+    // Pause before transitioning to next greeting
     const totalTypingTime = currentGreeting.length * 150;
     timeouts.push(setTimeout(() => {
-      // Erasing animation
+      // Character-by-character erase effect
       for (let i = currentGreeting.length; i >= 0; i--) {
         timeouts.push(setTimeout(() => {
           setDisplayGreeting(currentGreeting.slice(0, i));
         }, (currentGreeting.length - i) * 50));
       }
       
-      // Move to next greeting after erasing
+      // Cycle to next greeting in array
       timeouts.push(setTimeout(() => {
         setCurrentGreetingIndex((prev) => (prev + 1) % greetings.length);
       }, currentGreeting.length * 50 + 300));
       
-    }, totalTypingTime + 2000)); // Wait 2 seconds after typing
+    }, totalTypingTime + 2000));
     
     return () => timeouts.forEach(clearTimeout);
   }, [currentGreetingIndex]);
 
-  // Role typing animation effect
+  // Animate professional roles
   useEffect(() => {
     const currentRole = roles[currentIndex];
     let timeouts: number[] = [];
     
-    // Typing animation
+    // Type out current role
     for (let i = 0; i <= currentRole.length; i++) {
       timeouts.push(setTimeout(() => {
         setDisplayText(currentRole.slice(0, i));
       }, i * 100));
     }
     
-    // Wait, then clear and move to next role
+    // Transition to next role
     timeouts.push(setTimeout(() => {
       for (let i = currentRole.length; i >= 0; i--) {
         timeouts.push(setTimeout(() => {
@@ -88,7 +88,7 @@ const Hero: React.FC = () => {
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-blue-50 via-white to-indigo-50">
-      {/* Animated background elements */}
+      {/* Background decoration */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-orange-400 to-yellow-400 rounded-full opacity-10 animate-pulse"></div>
         <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-gradient-to-br from-orange-300 to-yellow-500 rounded-full opacity-10 animate-pulse delay-1000"></div>

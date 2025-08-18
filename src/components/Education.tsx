@@ -11,7 +11,7 @@ const Education: React.FC = () => {
   ];
 
   return (
-    <section id="education" className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+    <section id="education" className="py-20">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
@@ -24,7 +24,7 @@ const Education: React.FC = () => {
 
         <div className="max-w-3xl mx-auto">
           {educationHistory.map((edu, index) => (
-            <div key={index} className="bg-white rounded-xl shadow-lg p-4 md:p-6 lg:p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100">
+            <div key={index} className="bg-gradient-to-br from-white via-gray-100 to-gray-200 rounded-xl shadow-lg p-4 md:p-6 lg:p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100">
               <h3 className="text-lg md:text-xl lg:text-2xl font-bold text-gray-900 mb-3 leading-tight">{edu.degree}</h3>
               <div className="space-y-2 text-gray-600">
                 <div className="flex items-center space-x-2">

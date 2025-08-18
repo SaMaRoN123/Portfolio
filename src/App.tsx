@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -7,12 +7,13 @@ import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Education from './components/Education';
+import Hobbies from './components/Hobbies';
 function App() {
   const [activeSection, setActiveSection] = useState('home');
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'about', 'experience','education','projects', 'contact'];
+      const sections = ['home', 'about', 'experience','education','projects', 'hobbies', 'contact'];
       const scrollPosition = window.scrollY + 100;
 
       sections.forEach((section) => {
@@ -31,7 +32,7 @@ function App() {
   }, []);
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-gradient-to-br from-slate-100 via-stone-200 to-gray-300">
       <Header activeSection={activeSection} onNavigate={setActiveSection} />
       <main>
         <Hero />
@@ -39,6 +40,7 @@ function App() {
         <Experience />
         <Education />
         <Projects />
+        <Hobbies />
         <Contact />
       </main>
       <Footer />

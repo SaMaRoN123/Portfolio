@@ -37,8 +37,8 @@ const Experience: React.FC = () => {
 
   return (
     <>
-      {/* Experience Section */}
-      <section id="experience" className="py-20 bg-white">
+      {/* Work history */}
+      <section id="experience" className="py-20">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -51,16 +51,16 @@ const Experience: React.FC = () => {
           </div>
 
           <div className="relative">
-            {/* Timeline line */}
+            {/* Timeline connector */}
             <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-400 to-indigo-600 hidden md:block"></div>
 
             <div className="space-y-12">
               {experiences.map((exp, index) => (
                 <div
                   key={index}
-                  className="relative md:ml-16 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100"
+                  className="relative md:ml-16 bg-gradient-to-br from-white via-gray-100 to-gray-200 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100"
                 >
-                  {/* Timeline dot */}
+                  {/* Timeline marker */}
                   <div className="absolute -left-20 top-8 w-4 h-4 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full border-4 border-white shadow-lg hidden md:block"></div>
 
                   <div className="p-8">
@@ -119,8 +119,8 @@ const Experience: React.FC = () => {
         </div>
       </section>
 
-      {/* Certifications Section */}
-      <section id="certifications" className="py-20 bg-gray-50">
+      {/* Certifications */}
+      <section id="certifications" className="py-20">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -135,7 +135,7 @@ const Experience: React.FC = () => {
             {certifications.map((cert, index) => (
               <div
                 key={index}
-                className="flex items-center bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-100"
+                className="flex items-center bg-gradient-to-r from-white via-gray-100 to-gray-200 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-100"
               >
                 <Award size={28} className="text-blue-500 mr-4 flex-shrink-0" />
                 <span className="text-gray-800 font-medium">{cert}</span>

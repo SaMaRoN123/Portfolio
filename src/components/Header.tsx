@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Home, User, Briefcase, FolderOpen, Mail } from 'lucide-react';
+import { Menu, X, Home, User, Briefcase, FolderOpen, Mail, Music } from 'lucide-react';
 
 interface HeaderProps {
   activeSection: string;
@@ -23,6 +23,7 @@ const Header: React.FC<HeaderProps> = ({ activeSection, onNavigate }) => {
     { id: 'about', label: 'About', icon: User },
     { id: 'experience', label: 'Experience', icon: Briefcase },
     { id: 'projects', label: 'Projects', icon: FolderOpen },
+    { id: 'hobbies', label: 'Hobbies', icon: Music },
     { id: 'contact', label: 'Contact', icon: Mail },
   ];
 
@@ -39,7 +40,7 @@ const Header: React.FC<HeaderProps> = ({ activeSection, onNavigate }) => {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-white/95 backdrop-blur-md shadow-lg'
+          ? 'bg-white/10 backdrop-blur-md shadow-lg'
           : 'bg-transparent'
       }`}
     >
@@ -49,7 +50,7 @@ const Header: React.FC<HeaderProps> = ({ activeSection, onNavigate }) => {
             Portfolio
           </div>
 
-          {/* Desktop Navigation */}
+          {/* Main navigation */}
           <div className="hidden md:flex space-x-8">
             {navItems.map(({ id, label, icon: Icon }) => (
               <button
@@ -67,7 +68,7 @@ const Header: React.FC<HeaderProps> = ({ activeSection, onNavigate }) => {
             ))}
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile toggle */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
@@ -76,9 +77,9 @@ const Header: React.FC<HeaderProps> = ({ activeSection, onNavigate }) => {
           </button>
         </div>
 
-        {/* Mobile Navigation */}
+        {/* Mobile menu */}
         {isMenuOpen && (
-          <div className="md:hidden mt-4 bg-white rounded-lg shadow-xl border p-2 space-y-1 max-h-80 overflow-y-auto">
+          <div className="md:hidden mt-4 bg-white/20 backdrop-blur-sm rounded-lg shadow-xl border p-2 space-y-1 max-h-80 overflow-y-auto">
             {navItems.map(({ id, label, icon: Icon }) => (
               <button
                 key={id}

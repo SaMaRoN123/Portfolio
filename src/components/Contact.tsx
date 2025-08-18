@@ -39,22 +39,16 @@ const Contact: React.FC = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 bg-gradient-to-br from-gray-900 via-orange-900 to-yellow-900 text-white">
+    <section id="contact" className="py-20 text-gray-900">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-            Get In Touch
-          </h2>
-          <p className="text-lg md:text-xl text-blue-100 max-w-3xl mx-auto px-4">
-            Feel free to reach out for collaborations, opportunities, or just to connect!
-          </p>
         </div>
 
         <div className="max-w-4xl mx-auto">
           <div className="space-y-8 text-center">
             <div>
               <h3 className="text-xl md:text-2xl font-bold mb-4 md:mb-6 text-center">Let's Connect</h3>
-              <p className="text-orange-100 mb-6 md:mb-8 leading-relaxed text-sm md:text-base max-w-2xl mx-auto">
+              <p className="text-gray-700 mb-6 md:mb-8 leading-relaxed text-sm md:text-base max-w-2xl mx-auto">
                 Whether you have a project in mind, want to collaborate, or just want to say hello, 
                 I'd love to hear from you!
               </p>
@@ -71,15 +65,15 @@ const Contact: React.FC = () => {
                     <Icon size={18} className="md:w-6 md:h-6" />
                   </div>
                   <div>
-                    <p className="font-semibold text-sm md:text-base text-center">{label}</p>
-                    <p className="text-orange-100 text-sm md:text-base break-all text-center">{value}</p>
+                    <p className="font-semibold text-sm md:text-base text-center text-gray-900">{label}</p>
+                    <p className="text-gray-700 text-sm md:text-base break-all text-center">{value}</p>
                   </div>
                 </a>
               ))}
             </div>
 
             <div className="text-center">
-              <h4 className="text-base md:text-lg font-semibold mb-4">Follow Me</h4>
+              <h4 className="text-base md:text-lg font-semibold mb-4 text-gray-900">Follow Me</h4>
               <div className="flex justify-center space-x-6">
                 {socialLinks.map(({ icon: Icon, label, link, color }) => (
                   <a 

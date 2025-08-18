@@ -20,7 +20,7 @@ const About: React.FC = () => {
     },
     {
       category: 'Design',
-      items: ['Figma', 'Adobe XD', 'Photoshop', 'UI/UX', 'Prototyping'],
+      items: ['Figma', 'Photoshop', 'After Effects', 'UI/UX', 'Prototyping'],
       color: 'from-yellow-400 to-orange-500'
     },
     {
@@ -59,7 +59,7 @@ const About: React.FC = () => {
   ];
 
   return (
-    <section id="about" className="py-20 bg-white">
+    <section id="about" className="py-20">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
@@ -108,11 +108,11 @@ const About: React.FC = () => {
             {skills.map((skill, index) => (
               <div 
                 key={skill.category}
-                className="bg-white border rounded-xl p-4 md:p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 touch-manipulation"
+                className="bg-white/20 backdrop-blur-sm border border-white/30 rounded-xl p-4 md:p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 touch-manipulation"
                 style={{ animationDelay: `${index * 150}ms` }}
               >
                 <div className={`w-10 md:w-12 h-10 md:h-12 rounded-lg bg-gradient-to-r ${skill.color} mb-3 md:mb-4 flex items-center justify-center`}>
-                  <div className="w-5 md:w-6 h-5 md:h-6 bg-white rounded opacity-80"></div>
+                  <div className="w-5 md:w-6 h-5 md:h-6 bg-white/50 rounded opacity-80"></div>
                 </div>
                 <h4 className="font-semibold text-gray-900 mb-3 md:mb-4 text-sm md:text-base">{skill.category}</h4>
                 <div className="space-y-2">

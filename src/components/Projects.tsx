@@ -18,9 +18,9 @@ const Projects: React.FC = () => {
       title: 'Nebula AI Chat App',
       description: 'A full-stack, private AI chat application featuring a React frontend and a FastAPI backend. The app uses a locally-hosted Mistral 7B model served via LM Studio, ensuring 100% data privacy and real-time conversational memory.',
       image: 'https://images.pexels.com/photos/547114/pexels-photo-547114.jpeg?auto=compress&cs=tinysrgb&w=600',
-      category: 'aiml', // Changed category
+      category: 'aiml',
       technologies: ['React', 'FastAPI', 'Python', 'LM Studio', 'Mistral 7B', 'TailwindCSS'],
-      github: '#', // Add your GitHub link here
+      github: '#',
 
     },
     {
@@ -47,7 +47,7 @@ const Projects: React.FC = () => {
     { id: 'all', label: 'All Projects' },
     { id: 'fullstack', label: 'Full Stack' },
     { id: 'frontend', label: 'Frontend' },
-    { id: 'aiml', label: 'AI/ML' } // Changed from Backend to AI/ML
+    { id: 'aiml', label: 'AI/ML' }
   ];
 
   const filteredProjects = projects.filter(project => {
@@ -56,7 +56,7 @@ const Projects: React.FC = () => {
   });
 
   return (
-    <section id="projects" className="py-20 bg-white">
+    <section id="projects" className="py-20">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -66,7 +66,7 @@ const Projects: React.FC = () => {
             A showcase of my AI and web development work, built using modern tools and frameworks.
           </p>
 
-          {/* Filter buttons */}
+          {/* Category filters */}
           <div className="flex flex-wrap justify-center items-center gap-4 mb-12">
             <Filter className="text-gray-400" size={20} />
             {filters.map((filter) => (
@@ -90,7 +90,7 @@ const Projects: React.FC = () => {
             <div 
               key={index}
               onClick={() => window.open(project.github, '_blank')}
-              className="group bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 cursor-pointer"
+              className="group bg-gradient-to-br from-white via-gray-100 to-gray-200 rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 cursor-pointer"
             >
               <div className="relative overflow-hidden">
                 <img 
