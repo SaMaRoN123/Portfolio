@@ -116,7 +116,7 @@ const Hero: React.FC = () => {
           
           <p className="text-lg md:text-xl text-gray-600 mb-8 md:mb-12 max-w-3xl mx-auto leading-relaxed px-4">
             Passionate software developer with expertise in full-stack development, AI/ML and modern web technologies. 
-            I create scalable applications and innovative solutions that drive business growth.
+            I create applications and innovative solutions that drive me to learn and grow.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12 md:mb-16 px-4">
