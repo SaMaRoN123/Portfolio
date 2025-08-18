@@ -5,12 +5,12 @@ const About: React.FC = () => {
   const skills = [
     {
       category: 'Frontend',
-      items: ['React', 'Tailwind CSS', 'Vue.js'],
+      items: ['React', 'Tailwind CSS', 'Next.js'],
       color: 'from-orange-500 to-yellow-500'
     },
     {
       category: 'Backend',
-      items: ['Node.js', 'Python', 'MongoDB',],
+      items: ['Node.js', 'Python', 'PostgreSQL',],
       color: 'from-yellow-500 to-orange-600'
     },
     {

@@ -8,51 +8,38 @@ const Projects: React.FC = () => {
     {
       title: 'SmoothBooks - Accounting & Bookkeeping App',
       description: 'A comprehensive full-stack accounting application built with React frontend and Flask backend. Features invoice management, expense tracking, payroll processing, financial reports, and analytics with modern UI/UX.',
-      image: 'https://images.pexels.com/photos/7688336/pexels-photo-7688336.jpeg?auto=compress&cs=tinysrgb&w=600',
-      category: 'fullstack',
+      image: '/smoothbooks.png',
+      category: ['fullstack'],
       technologies: ['React', 'Flask', 'Python', 'SQLAlchemy', 'JWT', 'Docker'],
       github: 'https://github.com/SaMaRoN123/SmoothBooks',
-
     },
     {
       title: 'Nebula AI Chat App',
-      description: 'A full-stack, private AI chat application featuring a React frontend and a FastAPI backend. The app uses a locally-hosted Mistral 7B model served via LM Studio, ensuring 100% data privacy and real-time conversational memory.',
-      image: 'https://images.pexels.com/photos/547114/pexels-photo-547114.jpeg?auto=compress&cs=tinysrgb&w=600',
-      category: 'aiml',
-      technologies: ['React', 'FastAPI', 'Python', 'LM Studio', 'Mistral 7B', 'TailwindCSS'],
-      github: '#',
-
+      description: 'A modern AI chat application with Python code execution capabilities run locally, built with Next.js frontend and FastAPI backend. Features LM Studio integration for local AI model inference, real-time streaming responses, PostgreSQL database, JWT authentication, and an integrated code IDE with Monaco Editor.',
+      image: '/nebula.png',
+      category: ['aiml', 'fullstack'], 
+      technologies: ['Next.js', 'FastAPI', 'Python', 'LM Studio', 'PostgreSQL', 'TailwindCSS', 'Monaco Editor', 'Pyodide'],
+      github: 'https://github.com/samaron123/nebulallm',
     },
     {
       title: 'Mental Health Prediction App',
       description: 'A Streamlit-based application that predicts mental health conditions using machine learning models. Includes data preprocessing, EDA, and interactive visualizations.',
-      image: 'https://images.pexels.com/photos/6749779/pexels-photo-6749779.jpeg?auto=compress&cs=tinysrgb&w=600',
-      category: 'aiml', 
+      image: '/mhprediction.png',
+      category: ['aiml'], 
       technologies: ['Python', 'Streamlit', 'Pandas', 'Matplotlib', 'Scikit-learn'],
       github: 'https://github.com/SaMaRoN123/mhprediction',
-
     },
-    {
-      title: 'Simphony – Music Player Web App',
-      description: 'A full-stack music player built with React, featuring user-friendly UI, audio controls, and library management.',
-      image: 'https://images.pexels.com/photos/164745/pexels-photo-164745.jpeg?auto=compress&cs=tinysrgb&w=600',
-      category: 'fullstack',
-      technologies: ['React', 'JavaScript', 'HTML5', 'CSS3'],
-      github: 'https://github.com/SaMaRoN123/simphony',
-
-    }
   ];
 
   const filters = [
     { id: 'all', label: 'All Projects' },
     { id: 'fullstack', label: 'Full Stack' },
-    { id: 'frontend', label: 'Frontend' },
     { id: 'aiml', label: 'AI/ML' }
   ];
 
   const filteredProjects = projects.filter(project => {
     if (activeFilter === 'all') return true;
-    return project.category === activeFilter;
+    return project.category.includes(activeFilter);
   });
 
   return (
@@ -98,7 +85,6 @@ const Projects: React.FC = () => {
                   alt={project.title}
                   className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
                 />
-                
               </div>
 
               <div className="p-6">

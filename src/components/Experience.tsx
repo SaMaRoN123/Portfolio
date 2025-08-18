@@ -11,20 +11,19 @@ const Experience: React.FC = () => {
       description:
         'Contributed to public sector projects by analyzing large datasets and developing AI/ML models to address complex business and security challenges.',
       achievements: [
-        'Built and optimized deep learning models in PyTorch for deepfake detection.',
-        'Integrated models into Flask-based applications for demonstrative and stakeholder-facing tools.',
-        'Regularly presented technical findings to cross-functional teams, including senior government and IT executives.',
-        'Conducted performance analysis and iterative refinement of models for production scalability.',
-        'Collaborated on defining project goals and aligning technical development with strategic business objectives.'
+        'Researched and implemented machine learning models in PyTorch',
+        'Integrated models into Flask-based applications for demonstrative and client-facing tools.',
+        'Implemented Docker containerization for seamless dependency management and consistent deployment environments across development and research',
+        'Conducted stakeholder meetings with firm partners and senior executives, gathering feedback to refactor required parameters and user experience based on client requirements',
       ],
       technologies: [
         'Python',
         'PyTorch',
         'Flask',
         'Hugging Face',
-        'SQL',
-        'R',
-        'React'
+ 
+        'Docker'
+        
       ]
     }
   ];

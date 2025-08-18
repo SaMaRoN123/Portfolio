@@ -2,21 +2,42 @@ import React, { useState, useEffect } from 'react';
 import { ChevronDown, Download, ExternalLink } from 'lucide-react';
 
 const Hero: React.FC = () => {
-  const [displayText, setDisplayText] = useState('');
-  const [currentIndex, setCurrentIndex] = useState(0);
   const [currentGreetingIndex, setCurrentGreetingIndex] = useState(0);
   const [displayGreeting, setDisplayGreeting] = useState('Hi');
-  const roles = ['Generative AI', 'Full Stack Developer', 'Problem Solver'];
   const greetings = [
     'Hi',
     'नमस्ते',
     'Bonjour',
+    'Hola',
+    'Ciao',
+    'Hallo',
+    'Olá',
     'வணக்கம்',
     'നമസ്കാരം',
     'నమస్కారం',
     'ਸਤ ਸ੍ਰੀ ਅਕਾਲ',
-    'السلام علیکم'
-
+    'السلام علیکم',
+    'Привет',
+    'こんにちは',
+    '안녕하세요',
+    '你好',
+    'สวัสดี',
+    'Xin chào',
+    'Merhaba',
+    'Γεια σας',
+    'שלום',
+    'Ahoj',
+    'Hej',
+    'Tere',
+    'Sveiki',
+    'Labas',
+    'Zdravo',
+    'Pozdrav',
+    'Szia',
+    'Bună',
+    'Здраво',
+    'Përshëndetje',
+    'Pozdravljeni'
   ];
   
   // Animate greeting text transitions
@@ -54,33 +75,7 @@ const Hero: React.FC = () => {
     return () => timeouts.forEach(clearTimeout);
   }, [currentGreetingIndex]);
 
-  // Animate professional roles
-  useEffect(() => {
-    const currentRole = roles[currentIndex];
-    let timeouts: number[] = [];
-    
-    // Type out current role
-    for (let i = 0; i <= currentRole.length; i++) {
-      timeouts.push(setTimeout(() => {
-        setDisplayText(currentRole.slice(0, i));
-      }, i * 100));
-    }
-    
-    // Transition to next role
-    timeouts.push(setTimeout(() => {
-      for (let i = currentRole.length; i >= 0; i--) {
-        timeouts.push(setTimeout(() => {
-          setDisplayText(currentRole.slice(0, i));
-        }, (currentRole.length - i) * 50 + 2000));
-      }
-      
-      setTimeout(() => {
-        setCurrentIndex((prev) => (prev + 1) % roles.length);
-      }, 3000);
-    }, currentRole.length * 100 + 1000));
-    
-    return () => timeouts.forEach(clearTimeout);
-  }, [currentIndex]);
+
 
   const scrollToAbout = () => {
     document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
@@ -97,22 +92,19 @@ const Hero: React.FC = () => {
 
       <div className="max-w-6xl mx-auto px-6 text-center relative z-10">
         <div className="animate-fade-in-up">
-          <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold text-gray-900 mb-4 md:mb-6 leading-tight">
-            <span className="inline-block">
+          <div className="text-4xl sm:text-5xl md:text-7xl font-bold text-gray-900 mb-4 md:mb-6 leading-tight">
+            <div className="flex flex-wrap items-center justify-center gap-2">
               <span className="border-r-2 border-orange-500 pr-2 animate-pulse">
                 {displayGreeting}
               </span>
-            </span>, I'm{' '}
-            <span className="bg-gradient-to-r from-orange-500 to-yellow-500 bg-clip-text text-transparent">
+              <span>, I'm</span>
+            </div>
+            <div className="bg-gradient-to-r from-orange-500 to-yellow-500 bg-clip-text text-transparent">
               Srijan Prakash
-            </span>
-          </h1>
-          
-          <div className="text-xl sm:text-2xl md:text-3xl text-gray-700 mb-6 md:mb-8 h-10 md:h-12 flex items-center justify-center">
-            <span className="border-r-2 border-orange-500 pr-2 animate-pulse">
-              {displayText}
-            </span>
+            </div>
           </div>
+          
+
           
           <p className="text-lg md:text-xl text-gray-600 mb-8 md:mb-12 max-w-3xl mx-auto leading-relaxed px-4">
             Passionate software developer with expertise in full-stack development, AI/ML and modern web technologies. 
