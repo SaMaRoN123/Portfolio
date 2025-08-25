@@ -10,12 +10,6 @@ const Contact: React.FC = () => {
       link: 'mailto:srijanprakash01@gmail.com'
     },
     {
-      icon: Phone,
-      label: 'Phone',
-      value: '+1 (519) 718-3301',
-      link: 'tel:+15197183301'
-    },
-    {
       icon: MapPin,
       label: 'Location',
       value: 'Toronto, Canada',
