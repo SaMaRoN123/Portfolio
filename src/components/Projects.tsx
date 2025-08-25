@@ -5,14 +5,7 @@ const Projects: React.FC = () => {
   const [activeFilter, setActiveFilter] = useState('all');
   
   const projects = [
-    {
-      title: 'SmoothBooks - Accounting & Bookkeeping App',
-      description: 'A comprehensive full-stack accounting application built with React frontend and Flask backend. Features invoice management, expense tracking, payroll processing, financial reports, and analytics with modern UI/UX.',
-      image: '/smoothbooks.png',
-      category: ['fullstack'],
-      technologies: ['React', 'Flask', 'Python', 'SQLAlchemy', 'JWT', 'Docker'],
-      github: 'https://github.com/SaMaRoN123/SmoothBooks',
-    },
+
     {
       title: 'Nebula AI Chat App',
       description: 'A modern AI chat application with Python code execution capabilities run locally, built with Next.js frontend and FastAPI backend. Features LM Studio integration for local AI model inference, real-time streaming responses, PostgreSQL database, JWT authentication, and an integrated code IDE with Monaco Editor.',
@@ -28,6 +21,14 @@ const Projects: React.FC = () => {
       category: ['aiml'], 
       technologies: ['Python', 'Streamlit', 'Pandas', 'Matplotlib', 'Scikit-learn'],
       github: 'https://github.com/SaMaRoN123/mhprediction',
+    },
+    {
+      title: 'SmoothBooks - Accounting & Bookkeeping App',
+      description: 'A comprehensive full-stack accounting application built with React frontend and Flask backend. Features invoice management, expense tracking, payroll processing, financial reports, and analytics with modern UI/UX.',
+      image: '/smoothbooks.png',
+      category: ['fullstack'],
+      technologies: ['React', 'Flask', 'Python', 'SQLAlchemy', 'JWT', 'Docker'],
+      github: 'https://github.com/SaMaRoN123/SmoothBooks',
     },
   ];
 
