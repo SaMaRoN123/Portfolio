@@ -121,8 +121,8 @@ const Hero: React.FC = () => {
             </button>
             
             <a 
-              href="/Srijan_Prakash_Resume.docx" 
-              download="Srijan_Prakash_Resume.docx"
+              href="/Srijan_Prakash_Resume.pdf" 
+              download="Srijan_Prakash_Resume.pdf"
               className="w-full sm:w-auto border-2 border-gray-300 text-gray-700 px-6 md:px-8 py-3 md:py-4 rounded-full font-semibold text-base md:text-lg hover:border-orange-500 hover:text-orange-500 hover:shadow-lg hover:scale-105 transition-all duration-300 flex items-center justify-center space-x-2 touch-manipulation"
             >
               <Download size={20} />
